@@ -12,11 +12,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 app.use(bodyParser.json());
 
-app.get('/items', (req, res) => {
-    axios.get('http://localhost:3007/items')
-    .then(result => res.send(result.data))
-    .catch(err => console.log(err))
-})
+// app.get('/items', (req, res) => {
+//     axios.get('http://localhost:3007/items')
+//     .then(result => res.send(result.data))
+//     .catch(err => console.log(err))
+// })
 
 // app.get('/items/:id', (req, res) => {
 //     var id = req.params.id;

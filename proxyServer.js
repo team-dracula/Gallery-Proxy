@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
@@ -8,6 +9,10 @@ const cors = require('cors');
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
+
+app.get(`/${process.env.LOADER_IO_KEY}`, (req, res) => {
+  res.sendFile(path.join(__dirname, `../public/${process.env.LOADER_IO_KEY}`));
+});
 
 app.get('/:id', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/index.html'))

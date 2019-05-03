@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/hack-reactor-front-end-abrm/Neighborhood-Proxy#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "cors": "^2.8.5",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
